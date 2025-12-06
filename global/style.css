@@ -1,0 +1,30 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  background: #0f4347;
+  padding: 20px;
+  color: #e3d477;
+}
+
+#timer {
+  font-size: 70px;
+  margin: 20px 0;
+  box-sizing: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: #e38d77;
+  color: aliceblue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.configs label {
+  display: block;
+  margin: 10px 0;
+  justify-self: center;
+}
