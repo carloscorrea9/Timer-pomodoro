@@ -98,7 +98,7 @@ function registrarHistorico(texto) {
   const data = new Date().toLocaleString();
   const item = `${data} - ${texto}`;
 
-  let historico = JSON.parse(localStorage.getItem("historico"));
+  let historico = JSON.parse(localStorage.getItem("historico")) || [];
   historico.push(item);
 
   localStorage.setItem("historico", JSON.stringify(historico));
@@ -112,3 +112,39 @@ document.getElementById("manual").onclick = () => {
 
   registrarHistorico(`Estudou por ${minutos} minutos`);
 };
+
+// parte floco de neve para estilo natalico//
+const neve = document.getElementById("neve-fundo");
+
+for (let i = 0; i < 60; i++) {
+  const f = document.createElement("div");
+  f.className = "flocos-neve";
+
+  const size = Math.random() * 4 + 2; // tamanho leve
+  f.style.width = size + "px";
+  f.style.height = size + "px";
+
+  f.style.left = Math.random() * 100 + "vw";
+  f.style.animationDuration = 3 + Math.random() * 4 + "s";
+  f.style.animationDelay = Math.random() * 5 + "s";
+
+  neve.appendChild(f);
+}
+
+//Limpando historico
+const btnlimpar = document.getElementById("limparHistorico");
+const historicoP = document.getElementById("historico");
+
+btnlimpar.addEventListener("click", () => {
+  localStorage.removeItem("historico");
+
+  if (historicoP) {
+    historicoP.innerHTML = "";
+  }
+});
+
+window.addEventListener("load", () => {
+  if (!localStorage.getItem("historico") && historicoP) {
+    historicoP.innerHTML = "";
+  }
+});

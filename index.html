@@ -5,10 +5,21 @@
   <meta charset="UTF-8">
   <title>Timer Pomodoro PJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./global/style.css">
+  <link rel="stylesheet" href="./global/global.css">
 </head>
 
 <body>
+  <div id="neve-fundo"></div>
+  <h1 id="titulo">⏱️ Timer Pomodoro - Projeto</h1>
+  <br>
+
+  <h2>Configurações</h2>
+  <div class="configs">
+    <label>Foco (min): <input type="number" id="foco" placeholder="Minutos"></label>
+    <label>Descanso (min): <input type="number" id="descanso" placeholder="Minutos"></label>
+    <label>Meta diária (horas): <input type="number" id="meta" placeholder="Horas"></label>
+    <button id="salvar">Salvar</button>
+  </div>
 
   <div id="timer">25:00</div>
 
@@ -18,20 +29,16 @@
     <button id="reset">Resetar</button>
   </div>
 
-  <h2>Configurações</h2>
-  <div class="configs">
-    <label>Foco (min): <input type="number" id="foco" placeholder="Minutos"></label>
-    <label>Descanso (min): <input type="number" id="descanso" placeholder="Minutos"></label>
-    <label>Meta diária (horas): <input type="number" id="meta" placeholder="Horas"></label>
-    <button id="salvar">Salvar Configurações</button>
-  </div>
+
 
   <h2>Histórico</h2>
-  <button id="manual">Adicionar registro manual</button>
+  <button id="manual">Adicionar registro</button>
+  <button id="limparHistorico">Limpar Histórico</button>
   <ul id="historico"></ul>
 
   <script src="script.js"></script>
   </div>
+
 
   <body>
 

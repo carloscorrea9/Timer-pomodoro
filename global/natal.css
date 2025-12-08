@@ -1,0 +1,22 @@
+#neve-fundo {
+  position: fixed;
+  inset: 0; /*ocupa a tela toda*/
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.flocos-neve {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
